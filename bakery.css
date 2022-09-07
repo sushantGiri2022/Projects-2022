@@ -1,0 +1,300 @@
+:root {
+  --primary-color: rgb(228, 28, 13);
+  --secondary-color: rgb(245, 238, 226);
+  --tertiatry-color: rgb(153, 79, 79);
+}
+
+body {
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+ul li {
+  text-decoration: none;
+  list-style: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  border-bottom-left-radius: 24px;
+  margin-top: 0;
+}
+
+nav > a:hover {
+  color: var(--primary-color);
+}
+
+.heading {
+  background-image: url(https://cdn.pixabay.com/photo/2015/04/20/13/22/hands-731265_1280.jpg);
+  width: 100%;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  opacity: 0.75;
+  color: var(--primary-color);
+  font-size: 30px;
+  padding-top: 20px;
+  text-shadow: 0px 1px black;
+}
+
+h2 {
+  margin-top: 45px;
+  font-family: cursive;
+}
+
+.intro {
+  margin-top: 100px;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+}
+
+.container > img {
+  width: 25%;
+}
+
+.button {
+  padding: 20px;
+  min-width: 150px;
+  cursor: pointer;
+  background-color: var(--tertiatry-color);
+  font-size: 15px;
+  margin: 0 auto;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  color: white;
+  background-color: black;
+  transition: 3sec;
+}
+
+.caption {
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.caption p {
+  margin: 16px;
+}
+
+.feedback {
+  line-height: 30px;
+  text-align: center;
+}
+
+.dual {
+  display: flex;
+}
+
+.dual > * {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+}
+
+.video-feature {
+  position: relative;
+  display: flex;
+}
+
+video {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.overwrite {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.name,
+.email {
+  width: 300px;
+  height: 50px;
+  text-align: start;
+  padding: 10px;
+}
+
+.name {
+  margin-right: 20px;
+}
+
+.textbox {
+  width: 640px;
+  height: 100px;
+  text-align: start;
+  padding: 10px;
+  margin-top: 20px;
+  resize: none;
+  font-family: sans-serif;
+}
+
+.ending {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.ending::after {
+  display: block;
+  content: " ";
+  background-image: url("https://cdn.pixabay.com/photo/2018/04/21/05/22/food-3337715_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  z-index: -1;
+  filter: brightness(25%);
+}
+
+.ending > * {
+  flex-direction: column;
+  flex: 1;
+}
+
+.ending h2 {
+  font-size: 30px;
+  font-family: fantasy;
+  margin-top: 80px;
+}
+
+.feedback > form > .button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.feedback input,
+textarea {
+  border: 1px solid yellow;
+  font-size: 1em;
+}
+
+.contact {
+  line-height: 25px;
+  text-align: center;
+}
+
+.font {
+  font-family: cursive;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: block;
+    position: inherit;
+    width: inherit;
+    display: block;
+    border-bottom-left-radius: 0px;
+    text-align: center;
+  }
+
+  nav > a {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .container > img {
+    width: 100%;
+  }
+
+  .dual {
+    height: inherit;
+    flex-direction: column;
+  }
+
+  .dual > * {
+    width: 100%;
+  }
+
+  .overwrite h2 {
+    margin-top: 0px;
+  }
+
+  .overwrite {
+    font-size: inherit;
+  }
+
+  .overwrite p {
+    display: none;
+  }
+
+  .ending {
+    display: block;
+    position: relative;
+    height: inherit;
+    padding-top: 40px;
+  }
+
+  .ending::after {
+    height: 100%;
+    width: 100%;
+    top: 0%;
+  }
+
+  .feedback h2 {
+    margin-top: 0px;
+  }
+
+  .textbox,
+  .name,
+  .email {
+    width: 100px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .textbox {
+    width: 270px;
+    height: 30px;
+  }
+  .name,
+  .email {
+    width: 114px;
+    height: 30px;
+  }
+}
+
+.email-link {
+  color: white;
+  text-decoration: none;
+}
